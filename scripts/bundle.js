@@ -19092,12 +19092,14 @@ module.exports = React.createClass({
 			boardArray: ['', '', '', '', '', '', '', '', ''],
 			turn: null,
 			playerOne: '',
-			playerTwo: ''
+			playerTwo: '',
+			plays: 0
 		};
 	},
 	render: function render() {
 		var _this = this;
 
+		console.log(this.state.plays);
 		if (this.state.turn) {
 			var playerTurn = React.createElement(
 				'div',
@@ -19244,7 +19246,8 @@ module.exports = React.createClass({
 		this.setState({
 			winner: false,
 			boardArray: ['', '', '', '', '', '', '', '', ''],
-			turn: this.state.playerOne
+			turn: this.state.playerOne,
+			plays: 0
 		});
 	},
 	choice: function choice(i) {
@@ -19266,7 +19269,14 @@ module.exports = React.createClass({
 					} else {
 						this.setState({
 							boardArray: array,
-							turn: this.state.playerTwo
+							turn: this.state.playerTwo,
+							plays: this.state.plays + 1
+						});
+					}
+					if (this.state.plays == 8) {
+						this.setState({
+							winner: true,
+							turn: 'Cats Game'
 						});
 					}
 				} else if (this.state.turn == this.state.playerTwo) {
@@ -19278,7 +19288,14 @@ module.exports = React.createClass({
 					} else {
 						this.setState({
 							boardArray: array,
-							turn: this.state.playerOne
+							turn: this.state.playerOne,
+							plays: this.state.plays + 1
+						});
+					}
+					if (this.state.plays == 8) {
+						this.setState({
+							winner: true,
+							turn: 'Cats Game'
 						});
 					}
 				}
