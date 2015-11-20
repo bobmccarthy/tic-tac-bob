@@ -19185,23 +19185,32 @@ module.exports = React.createClass({
 				)
 			),
 			React.createElement(
-				'select',
-				{ onChange: this.background, ref: 'select' },
+				'div',
+				{ className: 'select' },
 				React.createElement(
-					'option',
-					{ value: '1' },
-					'Meadow'
-				),
-				React.createElement(
-					'option',
-					{ value: '2' },
-					'Fall Colors'
-				),
-				React.createElement(
-					'option',
-					{ value: '3' },
-					'By the Lake'
+					'select',
+					{ onChange: this.background, ref: 'select' },
+					React.createElement(
+						'option',
+						{ value: '1' },
+						'Meadow +'
+					),
+					React.createElement(
+						'option',
+						{ value: '2' },
+						'Fall Colors +'
+					),
+					React.createElement(
+						'option',
+						{ value: '3' },
+						'By the Lake +'
+					)
 				)
+			),
+			React.createElement(
+				'div',
+				{ className: 'changeB' },
+				'Change Background:'
 			)
 		);
 	},

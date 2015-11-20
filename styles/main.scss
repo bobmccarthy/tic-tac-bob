@@ -80,7 +80,30 @@ body{
 		color: white;
 	}
 }
-
+.select{
+	float: right;
+	margin: 1em;
+	border: 3px solid black;
+	select{
+		background: transparent;
+		width: 7em;
+		padding: 5px;
+		font-size: 16px;
+		line-height: 1;
+		border: 0;
+		border-radius: 0;
+		height: 34px;
+		-webkit-appearance: none;
+		option{
+			// font-size: 2em;
+		}
+	}
+}
+.changeB{
+	float: right;
+	font-size: 1.5em;
+	margin: 1em;
+}
 
 #a0, #a1, #a2, #a3, #a4, #a5{
 	border-bottom: 3px solid #A4E402;

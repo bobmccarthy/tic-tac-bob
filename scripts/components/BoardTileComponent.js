@@ -51,11 +51,14 @@ module.exports = React.createClass({
 						{allSpaces}
 					</div>
 				</div>
-				<select onChange={this.background} ref="select">
-					<option value="1">Meadow</option>
-					<option value="2">Fall Colors</option>
-					<option value="3">By the Lake</option>
-				</select>
+				<div className="select">
+					<select onChange={this.background} ref="select">
+						<option value="1">Meadow +</option>
+						<option value="2">Fall Colors +</option>
+						<option value="3">By the Lake +</option>
+					</select>
+				</div>
+				<div className="changeB">Change Background:</div>
 			</div>
 		)
 	
