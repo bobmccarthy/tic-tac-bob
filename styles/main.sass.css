@@ -11,7 +11,8 @@ body {
   .title input {
     margin: 1em;
     font-size: 1.2em;
-    border-style: none; }
+    border-style: none;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2); }
 
 .action {
   padding-top: 1em;
@@ -27,7 +28,8 @@ body {
     margin-top: 0;
     font-size: 1em;
     border-radius: 1em;
-    background-color: #A4E402; }
+    background-color: #A4E402;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2); }
   .action button:last-child {
     float: right;
     background-color: #C8A4C2; }
@@ -55,10 +57,11 @@ body {
 
 .board {
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.6);
   width: 60%;
   max-width: 30em;
-  margin: 0 auto; }
+  margin: 0 auto;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2); }
 
 .tile {
   box-sizing: border-box;
@@ -71,9 +74,11 @@ body {
     color: white; }
 
 .select {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
   float: right;
   margin: 1em;
-  border: 3px solid black; }
+  border: 3px solid black;
+  background-color: white; }
   .select select {
     background: transparent;
     width: 7em;
@@ -89,6 +94,10 @@ body {
   float: right;
   font-size: 1.5em;
   margin: 1em; }
+
+.footer {
+  background-color: #FDD800;
+  overflow: hidden; }
 
 #a0, #a1, #a2, #a3, #a4, #a5 {
   border-bottom: 3px solid #A4E402; }

@@ -51,14 +51,17 @@ module.exports = React.createClass({
 						{allSpaces}
 					</div>
 				</div>
-				<div className="select">
-					<select onChange={this.background} ref="select">
-						<option value="1">Meadow +</option>
-						<option value="2">Fall Colors +</option>
-						<option value="3">By the Lake +</option>
-					</select>
-				</div>
-				<div className="changeB">Change Background:</div>
+				
+				<footer className="footer">
+					<div className="select">
+						<select onChange={this.background} ref="select">
+							<option value="1">Meadow +</option>
+							<option value="2">Fall Colors +</option>
+							<option value="3">By the Lake +</option>
+						</select>
+					</div>
+					<div className="changeB">Change Background:</div>
+				</footer>
 			</div>
 		)
 	
@@ -96,61 +99,66 @@ module.exports = React.createClass({
 	},
 	choice: function(i){
 		// console.log(i.target.id[1]);
-
-		var target=i.target.id[1];
-		var array = this.state.boardArray;
-		if (array[target]!==''){
-			console.log('try again');
+		if(this.state.winner){
+			console.log('winner');
 		}
 		else{
-			if (this.state.turn==this.state.playerOne){
-				array[target]='x';
-				if (
-					array[0]=='x'&&array[1]=='x'&&array[2]=='x'||
-					array[3]=='x'&&array[4]=='x'&&array[5]=='x'||
-					array[6]=='x'&&array[7]=='x'&&array[8]=='x'||
-					array[0]=='x'&&array[3]=='x'&&array[6]=='x'||
-					array[1]=='x'&&array[4]=='x'&&array[7]=='x'||
-					array[2]=='x'&&array[5]=='x'&&array[8]=='x'||
-					array[0]=='x'&&array[4]=='x'&&array[8]=='x'||
-					array[2]=='x'&&array[4]=='x'&&array[6]=='x'
-					){
-					this.setState({
-						winner: true
-					})
-				}
-				else{
-					this.setState({
-						boardArray: array,
-						turn: this.state.playerTwo
-					})
-				}
-				
+			var target=i.target.id[1];
+			var array = this.state.boardArray;
+			if (array[target]!==''){
+				console.log('try again');
 			}
-			else if (this.state.turn==this.state.playerTwo){
-				array[target]='o';
-				if (
-					array[0]=='o'&&array[1]=='o'&&array[2]=='o'||
-					array[3]=='o'&&array[4]=='o'&&array[5]=='o'||
-					array[6]=='o'&&array[7]=='o'&&array[8]=='o'||
-					array[0]=='o'&&array[3]=='o'&&array[6]=='o'||
-					array[1]=='o'&&array[4]=='o'&&array[7]=='o'||
-					array[2]=='o'&&array[5]=='o'&&array[8]=='o'||
-					array[0]=='o'&&array[4]=='o'&&array[8]=='o'||
-					array[2]=='o'&&array[4]=='o'&&array[6]=='o'
-					){
-					this.setState({
-						winner: true
-					})
+			else{
+				if (this.state.turn==this.state.playerOne){
+					array[target]='x';
+					if (
+						array[0]=='x'&&array[1]=='x'&&array[2]=='x'||
+						array[3]=='x'&&array[4]=='x'&&array[5]=='x'||
+						array[6]=='x'&&array[7]=='x'&&array[8]=='x'||
+						array[0]=='x'&&array[3]=='x'&&array[6]=='x'||
+						array[1]=='x'&&array[4]=='x'&&array[7]=='x'||
+						array[2]=='x'&&array[5]=='x'&&array[8]=='x'||
+						array[0]=='x'&&array[4]=='x'&&array[8]=='x'||
+						array[2]=='x'&&array[4]=='x'&&array[6]=='x'
+						){
+						this.setState({
+							winner: true
+						})
+					}
+					else{
+						this.setState({
+							boardArray: array,
+							turn: this.state.playerTwo
+						})
+					}
+					
 				}
-				else{
-					this.setState({
-						boardArray: array,
-						turn: this.state.playerOne
-					})
+				else if (this.state.turn==this.state.playerTwo){
+					array[target]='o';
+					if (
+						array[0]=='o'&&array[1]=='o'&&array[2]=='o'||
+						array[3]=='o'&&array[4]=='o'&&array[5]=='o'||
+						array[6]=='o'&&array[7]=='o'&&array[8]=='o'||
+						array[0]=='o'&&array[3]=='o'&&array[6]=='o'||
+						array[1]=='o'&&array[4]=='o'&&array[7]=='o'||
+						array[2]=='o'&&array[5]=='o'&&array[8]=='o'||
+						array[0]=='o'&&array[4]=='o'&&array[8]=='o'||
+						array[2]=='o'&&array[4]=='o'&&array[6]=='o'
+						){
+						this.setState({
+							winner: true
+						})
+					}
+					else{
+						this.setState({
+							boardArray: array,
+							turn: this.state.playerOne
+						})
+					}
 				}
 			}
 		}
+		
 		
 	},
 	background: function(){
