@@ -1,0 +1,77 @@
+body {
+  margin: 0; }
+
+.title {
+  background-color: #49C39E;
+  text-align: center; }
+  .title h1 {
+    margin: 0;
+    font-size: 3em;
+    color: white; }
+  .title input {
+    margin: 1em;
+    font-size: 1.2em;
+    border-style: none; }
+
+.action {
+  padding-top: 1em;
+  background-color: #82D3E1;
+  text-align: center;
+  overflow: hidden; }
+  .action button {
+    float: left;
+    border-style: none;
+    padding: 0.8em;
+    margin: 1em;
+    width: 15%;
+    margin-top: 0;
+    font-size: 1em;
+    border-radius: 1em;
+    background-color: #A4E402; }
+  .action button:last-child {
+    float: right;
+    background-color: #C8A4C2; }
+  .action .vs {
+    display: inline;
+    font-size: 2em;
+    color: white; }
+
+.instructions {
+  text-align: center;
+  padding: 0.5em; }
+  .instructions div {
+    font-size: 1.5em; }
+
+#winner {
+  color: red;
+  font-size: 2em; }
+
+#board-container {
+  background-size: cover;
+  overflow: hidden;
+  padding: 5em 0;
+  background-image: url("../images/background3.jpg");
+  padding-bottom: 15em; }
+
+.board {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 60%;
+  max-width: 30em;
+  margin: 0 auto; }
+
+.tile {
+  box-sizing: border-box;
+  height: 6em;
+  float: left;
+  width: 33%;
+  text-align: center; }
+  .tile span {
+    font-size: 5em;
+    color: white; }
+
+#a0, #a1, #a2, #a3, #a4, #a5 {
+  border-bottom: 3px solid #A4E402; }
+
+#a0, #a1, #a3, #a4, #a6, #a7 {
+  border-right: 3px solid #A4E402; }
